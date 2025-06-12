@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Ajith Portfolio</title>
+
+          <!-- Bootstrap CSS -->
+          <link
+               href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+               rel="stylesheet"
+          />
+
+          <!-- Font Awesome -->
+          <link
+               rel="stylesheet"
+               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          />
+
+          <!-- Google Fonts -->
+          <link
+               href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap"
+               rel="stylesheet"
+          />
+
+          <!-- AOS Animation -->
+          <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+          <style>
+               :root {
+                    --main-black: #000;
+                    --main-white: #fff;
+                    --accent-yellow: #ffd700;
+                    --gray-dark: #111;
+                    --gray-light: #1a1a1a;
+               }
+
+               body {
+                    font-family: "Julius Sans One", sans-serif;
+                    background: linear-gradient(145deg, #000000, #1b1b1b);
+                    color: var(--main-white);
+                    scroll-behavior: smooth;
+                    overflow-x: hidden;
+               }
+
+               a {
+                    color: var(--main-white);
+                    transition: all 0.3s ease;
+                    text-decoration: none;
+               }
+
+               a:hover {
+                    color: var(--accent-yellow);
+               }
+
+               .navbar {
+                    background-color: var(--gray-dark);
+                    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+                    backdrop-filter: blur(5px);
+               }
+
+               .navbar-brand {
+                    font-size: 1.7rem;
+                    color: var(--accent-yellow);
+                    letter-spacing: 1px;
+               }
+               /* ------------------------------------ */
+               .hero {
+                    padding: 150px 0 100px;
+                    background: radial-gradient(circle, #1c1c1c, #000);
+                    text-align: center;
+                    position: relative;
+                    overflow: hidden;
+               }
+
+               .carousel-3d-wrapper {
+                    perspective: 1200px;
+               }
+
+               .carousel-3d {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    height: 300px;
+                    transform-style: preserve-3d;
+                    transition: transform 0.3s ease-out;
+               }
+
+               .carousel-3d .item {
+                    width: 220px;
+                    height: 220px;
+                    border-radius: 20px;
+                    overflow: hidden;
+                    transition: transform 1s ease, opacity 1s ease, z-index 1s ease;
+                    position: absolute;
+                    opacity: 0;
+                    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
+               }
+
+               .carousel-3d .center {
+                    transform: translateZ(300px) scale(1.25);
+                    opacity: 1;
+                    z-index: 3;
+               }
+
+               .carousel-3d .left {
+                    transform: translateX(-260px) rotateY(50deg) scale(0.9);
+                    opacity: 0.7;
+                    z-index: 2;
+               }
+
+               .carousel-3d .right {
+                    transform: translateX(260px) rotateY(-50deg) scale(0.9);
+                    opacity: 0.7;
+                    z-index: 2;
+               }
+
+               .carousel-3d img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.3s ease;
+               }
+
+               .hero h1,
+               .hero p {
+                    animation: fadeInDown 1s ease forwards;
+               }
+
+               @keyframes fadeInDown {
+                    0% {
+                         opacity: 0;
+                         transform: translateY(-50px);
+                    }
+                    100% {
+                         opacity: 1;
+                         transform: translateY(0);
+                    }
+               }
+               /* 
+               .hero {
+                    padding: 150px 0 100px;
+                    background: radial-gradient(circle, #1c1c1c, #000);
+                    text-align: center;
+                    position: relative;
+                    overflow: hidden;
+               }
+
+               .hero::before {
+                    content: "";
+                    position: absolute;
+                    top: -30%;
+                    left: -30%;
+                    width: 160%;
+                    height: 160%;
+                    background: radial-gradient(circle, rgba(255, 215, 0, 0.05), transparent);
+                    animation: pulseGlow 8s ease-in-out infinite;
+                    z-index: 0;
+               }
+
+               @keyframes pulseGlow {
+                    0%,
+                    100% {
+                         transform: scale(1);
+                    }
+                    50% {
+                         transform: scale(1.1);
+                    }
+               }
+
+               .hero img {
+                    z-index: 1;
+                    width: 350px;
+                    height: 350px;
+                    border-radius: 50%;
+                    border: 4px solid var(--accent-yellow);
+                    box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
+                    object-fit: cover;
+                    animation: floatImage 3s ease-in-out infinite;
+               }
+
+               @keyframes floatImage {
+                    0%,
+                    100% {
+                         transform: translateY(0);
+                    }
+                    50% {
+                         transform: translateY(-12px);
+                    }
+               }
+
+               .hero h1 {
+                    font-size: 3.2rem;
+                    color: var(--accent-yellow);
+                    margin-top: 20px;
+                    z-index: 1;
+                    position: relative;
+               } */
+
+               .lead {
+                    opacity: 0.85;
+                    font-size: 1.25rem;
+                    margin-top: 10px;
+               }
+
+               .section {
+                    padding: 100px 0;
+                    border-bottom: 1px solid #333;
+               }
+
+               .card {
+                    background-color: #161616;
+                    border: none;
+                    border-radius: 12px;
+                    transition: all 0.4s ease;
+                    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+                    color: white;
+               }
+
+               .card:hover {
+                    transform: scale(1.03);
+                    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.2);
+                    color: rgb(0, 0, 0);
+                    background-color: white;
+               }
+
+               h2 {
+                    color: var(--accent-yellow);
+                    text-align: center;
+                    margin-bottom: 40px;
+                    position: relative;
+                    font-weight: bold;
+               }
+
+               h2::after {
+                    content: "";
+                    display: block;
+                    width: 60px;
+                    height: 3px;
+                    margin: 10px auto 0;
+                    background: var(--accent-yellow);
+               }
+
+               .progress {
+                    background-color: #333;
+                    height: 18px;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    margin-bottom: 15px;
+               }
+
+               .progress-bar {
+                    background-color: var(--accent-yellow);
+                    color: #000;
+                    font-weight: 500;
+                    padding-left: 10px;
+               }
+
+               .icon {
+                    color: var(--accent-yellow);
+                    margin-right: 10px;
+               }
+
+               .btn-yellow {
+                    background-color: var(--accent-yellow);
+                    color: #000;
+                    padding: 10px 20px;
+                    border-radius: 30px;
+                    font-weight: 600;
+                    transition: 0.3s;
+                    border: none;
+               }
+
+               .btn-yellow:hover {
+                    background-color: #e6c200;
+                    transform: scale(1.05);
+               }
+
+               input,
+               textarea {
+                    background-color: #000 !important;
+                    color: #fff !important;
+                    border: 1px solid #555 !important;
+                    border-radius: 8px;
+               }
+
+               input:focus,
+               textarea:focus {
+                    border-color: var(--accent-yellow) !important;
+                    box-shadow: 0 0 5px var(--accent-yellow);
+               }
+
+               .footer {
+                    background-color: #0c0c0c;
+                    color: #aaa;
+                    text-align: center;
+                    padding: 30px 0;
+                    font-size: 0.9rem;
+               }
+
+               /* Responsive */
+               @media (max-width: 768px) {
+                    .hero h1 {
+                         font-size: 2.2rem;
+                    }
+               }
+               .navbar-nav .nav-link {
+                    color: #fff !important;
+               }
+
+               .navbar-nav .nav-link:hover {
+                    color: var(--accent-yellow) !important;
+               }
+               .navbar-brand:focus,
+               .navbar-brand:hover {
+                    color: rgb(255 255 255);
+               }
+               .custom-cursor {
+                    width: 20px;
+                    height: 20px;
+                    border: 2px solid var(--accent-yellow);
+                    border-radius: 50%;
+                    position: fixed;
+                    pointer-events: none;
+                    transform: translate(-50%, -50%);
+                    z-index: 9999;
+                    transition: transform 0.1s ease;
+                    mix-blend-mode: difference;
+               }
+               #footerimg {
+                    width: 55px;
+                    height: auto;
+               }
+               #footera {
+                    color: rgb(249 243 0);
+                    text-decoration: none;
+               }
+          </style>
+     </head>
+     <body>
+          <div class="custom-cursor" id="customCursor"></div>
+          <!-- Navbar -->
+          <nav class="navbar navbar-expand-lg fixed-top">
+               <div class="container">
+                    <a class="navbar-brand" href="#">Ajith</a>
+                    <button
+                         class="navbar-toggler bg-light"
+                         type="button"
+                         data-bs-toggle="collapse"
+                         data-bs-target="#navbarNav"
+                    >
+                         <span class="navbar-toggler-icon bg-white"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                         <ul class="navbar-nav">
+                              <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                              <li class="nav-item">
+                                   <a class="nav-link" href="#experience">Experience</a>
+                              </li>
+                              <li class="nav-item">
+                                   <a class="nav-link" href="#skills">Skills</a>
+                              </li>
+                              <li class="nav-item">
+                                   <a class="nav-link" href="#education">Education</a>
+                              </li>
+                              <li class="nav-item">
+                                   <a class="nav-link" href="#contact">Contact</a>
+                              </li>
+                         </ul>
+                    </div>
+               </div>
+          </nav>
+
+          <!-- Hero Section -->
+          <!-- <section class="hero" id="home">
+               <div class="container" data-aos="fade-up">
+                    <img src="https://ajithjdx.github.io/AXDeveloper/Ajith00807.jpg" alt="Ajith" />
+                    <h1>I'm Ajith</h1>
+                    <p class="lead">Frontend Developer | UI/UX Enthusiast</p>
+               </div>
+          </section> -->
+          <!-- Hero Section with 3D-style Carousel -->
+          <!-- Hero Section -->
+          <section class="hero" id="home">
+               <div class="container" data-aos="fade-up">
+                    <div class="carousel-3d-wrapper">
+                         <div class="carousel-3d" id="carousel3D">
+                              <div class="item center">
+                                   <img
+                                        src="https://ajithjdx.github.io/AXDeveloper/Ajith00807.jpg"
+                                        alt="Ajith 1"
+                                   />
+                              </div>
+                              <div class="item right">
+                                   <img
+                                        src="https://ajithjdx.github.io/AXDeveloper/Ajith bc.jpg"
+                                        alt="Ajith 2"
+                                   />
+                              </div>
+                              <div class="item left">
+                                   <img
+                                        src="https://ajithjdx.github.io/AXDeveloper/Ajith cs.jpg"
+                                        alt="Ajith 3"
+                                   />
+                              </div>
+                         </div>
+                    </div>
+                    <br />
+                    <h1 class="mt-4" style="color: #e6c200">I'm Ajith</h1>
+                    <p class="lead">Frontend Developer | UI/UX Enthusiast</p>
+               </div>
+          </section>
+
+          <!-- About -->
+          <section class="section" id="about">
+               <div class="container" data-aos="fade-up">
+                    <h2>About Me</h2>
+                    <p class="text-center">
+                         I'm Ajith, a Frontend Developer focused on clean, responsive, and
+                         user-friendly web interfaces. I specialize in HTML, CSS, Bootstrap, and
+                         JavaScript with a passion for UI/UX. I turn ideas into smooth, engaging
+                         experiences.
+                    </p>
+               </div>
+          </section>
+
+          <!-- Experience -->
+          <section class="section" id="experience">
+               <div class="container" data-aos="fade-right">
+                    <h2>Experience</h2>
+                    <div class="card p-4 mb-4">
+                         <h5><i class="fas fa-briefcase icon"></i>ECS | Sep 2023 – Present</h5>
+                         <ul>
+                              <li>
+                                   Built scalable and responsive web interfaces using modern
+                                   frontend tools.
+                              </li>
+                              <li>
+                                   Collaborated with UI/UX designers to implement pixel-perfect
+                                   components.
+                              </li>
+                              <li>
+                                   Used reusable design systems to ensure consistency across pages.
+                              </li>
+                              <li>Connected frontend apps with APIs for dynamic data.</li>
+                              <li>Participated in agile teams, standups, and code reviews.</li>
+                         </ul>
+                    </div>
+                    <div class="card p-4">
+                         <h5><i class="fas fa-briefcase icon"></i>ECS | Nov 2022 – Aug 2023</h5>
+                         <ul>
+                              <li>Developed dashboards and interactive components.</li>
+                              <li>
+                                   Version control with Git, task tracking with JIRA, designs from
+                                   Figma.
+                              </li>
+                              <li>Conducted accessibility and usability reviews.</li>
+                              <li>Bug fixing and frontend-backend integration.</li>
+                         </ul>
+                    </div>
+               </div>
+          </section>
+
+          <!-- Skills -->
+          <section class="section" id="skills">
+               <div class="container" data-aos="fade-left">
+                    <h2>Skills</h2>
+                    <div class="mb-4">
+                         <h5><i class="fas fa-code icon"></i>HTML5, CSS3, Bootstrap</h5>
+                         <div class="progress">
+                              <div class="progress-bar" style="width: 90%">90%</div>
+                         </div>
+                    </div>
+                    <div class="mb-4">
+                         <h5><i class="fab fa-js icon"></i>JavaScript</h5>
+                         <div class="progress">
+                              <div class="progress-bar" style="width: 80%">80%</div>
+                         </div>
+                    </div>
+                    <div class="mb-4">
+                         <h5><i class="fas fa-pencil-ruler icon"></i>UI/UX & Wireframes</h5>
+                         <div class="progress">
+                              <div class="progress-bar" style="width: 75%">75%</div>
+                         </div>
+                    </div>
+                    <div class="mb-4">
+                         <h5><i class="fas fa-tools icon"></i>Tools (Git, JIRA, Figma)</h5>
+                         <div class="progress">
+                              <div class="progress-bar" style="width: 85%">85%</div>
+                         </div>
+                    </div>
+                    <div class="mb-4">
+                         <h5><i class="fas fa-code icon"></i>Java (Basic–Intermediate)</h5>
+                         <div class="progress">
+                              <div class="progress-bar" style="width: 60%">60%</div>
+                         </div>
+                    </div>
+                    <br />
+                    <div class="text-center mt-4">
+                         <h5><i class="fas fa-language icon"></i>Languages</h5>
+                         <p>English, Tamil, Kannada (Basic–Intermediate)</p>
+                    </div>
+               </div>
+          </section>
+
+          <!-- Education -->
+          <section class="section" id="education">
+               <div class="container" data-aos="zoom-in">
+                    <h2>Education</h2>
+                    <div class="text-center">
+                         <p>
+                              <strong
+                                   ><i class="fas fa-graduation-cap icon"></i>B.Sc., Computer
+                                   Science</strong
+                              ><br />
+                              Sri Ramakrishna College, Coimbatore<br />2019 – 2022
+                         </p>
+                         <p>
+                              <strong
+                                   ><i class="fas fa-school icon"></i>Higher Secondary
+                                   Certificate</strong
+                              ><br />
+                              Sri Raghavendra Matric Hr. Sec. School<br />2016 – 2019
+                         </p>
+                    </div>
+               </div>
+          </section>
+
+          <!-- Contact -->
+          <section class="section" id="contact">
+               <div class="container" data-aos="fade-up">
+                    <h2>Contact</h2>
+                    <div class="row justify-content-center text-center">
+                         <div class="col-md-6">
+                              <p>
+                                   <i class="fas fa-phone icon"></i
+                                   ><strong>Phone:</strong> 63******33
+                              </p>
+                              <p>
+                                   <i class="fas fa-envelope icon"></i
+                                   ><strong>Email:</strong> ajith*****002@gmail.com
+                              </p>
+                              <p>
+                                   <i class="fas fa-map-marker-alt icon"></i
+                                   ><strong>Address:</strong> Kallakurichi, Tamil Nadu
+                              </p>
+                         </div>
+                    </div>
+               </div>
+          </section>
+
+          <!-- Footer -->
+          <!-- <footer class="footer">
+               <div class="container">
+                    <p>&copy; 2025 Ajith. All rights reserved.</p>
+               </div>
+          </footer> -->
+          <footer class="fixed-bottom text-center" style="background-color: #000000">
+               Copyright ©
+               <script>
+                    document.write(new Date().getFullYear());
+               </script>
+               All rights reserved | This template is made with
+               <i class="ion-ios-heart" aria-hidden="true"></i> by
+               <a id="footera" href="https://ajithjdx.github.io/AXDeveloper/" target="_blank"
+                    >AX-Developer</a
+               >
+               <img id="footerimg" src="https://ajithjdx.github.io/AXDeveloper/Footer.gif" alt="" />
+          </footer>
+          <!-- Scripts -->
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+          <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+          <script>
+               AOS.init({ duration: 1200, once: true });
+
+               const cursor = document.getElementById("customCursor");
+               const carousel = document.getElementById("carousel3D");
+               const wrapper = document.querySelector(".carousel-3d-wrapper");
+
+               document.addEventListener("mousemove", (e) => {
+                    cursor.style.left = `${e.clientX}px`;
+                    cursor.style.top = `${e.clientY}px`;
+
+                    const rect = wrapper.getBoundingClientRect();
+                    const inside =
+                         e.clientX >= rect.left &&
+                         e.clientX <= rect.right &&
+                         e.clientY >= rect.top &&
+                         e.clientY <= rect.bottom;
+
+                    if (inside) {
+                         const x = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+                         const y = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+                         carousel.style.transform = `rotateY(${x * 25}deg) rotateX(${y * -25}deg)`;
+                    } else {
+                         carousel.style.transform = `rotateY(0deg) rotateX(0deg)`;
+                    }
+               });
+
+               const items = document.querySelectorAll(".carousel-3d .item");
+               let index = 0;
+
+               function rotateCarousel() {
+                    items.forEach((item) => item.classList.remove("left", "center", "right"));
+
+                    const total = items.length;
+                    const centerIndex = index % total;
+                    const leftIndex = (index + total - 1) % total;
+                    const rightIndex = (index + 1) % total;
+
+                    items[centerIndex].classList.add("center");
+                    items[leftIndex].classList.add("left");
+                    items[rightIndex].classList.add("right");
+
+                    index = (index + 1) % total;
+               }
+
+               setInterval(rotateCarousel, 4000);
+          </script>
+     </body>
+</html>
